@@ -1,0 +1,94 @@
+---
+import business from '../data/business.json';
+---
+
+<header class="nav">
+  <div class="nav__inner container">
+    <a href="/" class="nav__logo" aria-label="Ottawa Murphy Bed home">
+      <span class="nav__logo-main">Ottawa Murphy Bed</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary navigation">
+      <a href="#why" class="nav__link">Why a Murphy Bed?</a>
+      <a href="#showroom" class="nav__link">Showroom</a>
+      <a href="#faq" class="nav__link">FAQ</a>
+    </nav>
+    <a href={`tel:${business.phoneTel}`} class="nav__cta btn btn-primary">
+      {business.phone}
+    </a>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-slate-dark);
+    border-bottom: 3px solid var(--color-oak);
+  }
+
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    height: 64px;
+  }
+
+  .nav__logo {
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .nav__logo-main {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-cream);
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(245, 242, 237, 0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav__link:hover {
+    color: var(--color-cream);
+  }
+
+  .nav__cta {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .nav__links {
+      display: none;
+    }
+
+    .nav__logo-main {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav__cta {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>

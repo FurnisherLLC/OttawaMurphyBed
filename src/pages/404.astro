@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import business from '../data/business.json';
+---
+
+<Base
+  title="Page Not Found | Ottawa Murphy Bed"
+  description="The page you are looking for does not exist. Visit Ottawa Murphy Bed at 107 Colonnade Road North, Ottawa."
+>
+  <section class="notfound section">
+    <div class="container text-center">
+      <h1>Page not found</h1>
+      <p style="margin: 1.5rem auto; max-width: 480px; color: var(--color-text-muted);">
+        That page does not exist. Try the home page, or call us directly.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="/" class="btn btn-primary">Go to Home Page</a>
+        <a href={`tel:${business.phoneTel}`} class="btn btn-outline">Call {business.phone}</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .notfound {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+</style>

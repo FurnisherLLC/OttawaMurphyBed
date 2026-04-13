@@ -1,0 +1,167 @@
+---
+import business from '../data/business.json';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__col footer__col--brand">
+      <p class="footer__brand">Ottawa Murphy Bed</p>
+      <p class="footer__tagline">Space-saving wall beds for Ottawa homes</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__heading">Visit Us</h3>
+      <address class="footer__address">
+        {business.address.streetAddress}<br />
+        {business.address.addressLocality}, {business.address.addressRegion} {business.address.postalCode}<br />
+        Inside <a href={business.hostedAtUrl} target="_blank" rel="noopener">{business.hostedAt}</a>
+        / <a href={business.showroomUrl} target="_blank" rel="noopener">{business.showroom}</a> showroom
+      </address>
+      <a href={business.googleMapsUrl} class="footer__map-link" target="_blank" rel="noopener">
+        Get directions on Google Maps
+      </a>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__heading">Hours</h3>
+      <ul class="footer__hours">
+        {business.openingHours.map(h => (
+          <li>
+            <span>{h.days}</span>
+            <span>{h.closes ? `${h.opens} - ${h.closes}` : h.opens}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__heading">Contact</h3>
+      <p><a href={`tel:${business.phoneTel}`} class="footer__phone">{business.phone}</a></p>
+      <p><a href={`mailto:${business.email}`}>{business.email}</a></p>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; {year} Ottawa Murphy Bed. A <a href={business.hostedAtUrl} target="_blank" rel="noopener">Kessels</a> / <a href={business.showroomUrl} target="_blank" rel="noopener">The New Oak Tree</a> business.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-slate-dark);
+    color: var(--color-cream);
+    padding-top: 4rem;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(245, 242, 237, 0.15);
+  }
+
+  .footer__brand {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer__tagline {
+    font-size: 0.875rem;
+    color: rgba(245, 242, 237, 0.6);
+    line-height: 1.5;
+  }
+
+  .footer__heading {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-oak-light);
+    margin-bottom: 1rem;
+  }
+
+  .footer__address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: rgba(245, 242, 237, 0.8);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer__address a {
+    color: rgba(245, 242, 237, 0.9);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer__map-link {
+    font-size: 0.875rem;
+    color: var(--color-oak-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer__hours {
+    list-style: none;
+    font-size: 0.875rem;
+    color: rgba(245, 242, 237, 0.8);
+  }
+
+  .footer__hours li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(245, 242, 237, 0.1);
+  }
+
+  .footer__hours li:last-child { border-bottom: none; }
+
+  .footer__phone {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-cream);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer__col a {
+    color: rgba(245, 242, 237, 0.85);
+    transition: color 0.2s;
+  }
+
+  .footer__col a:hover {
+    color: var(--color-cream);
+  }
+
+  .footer__bottom {
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+    color: rgba(245, 242, 237, 0.4);
+  }
+
+  .footer__bottom a {
+    color: rgba(245, 242, 237, 0.5);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .footer__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

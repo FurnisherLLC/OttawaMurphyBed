@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Wall panel (closed murphy bed) -->
+  <rect x="8" y="6" width="48" height="52" rx="3" fill="#2B3A4E"/>
+  <!-- Panel frame detail -->
+  <rect x="14" y="12" width="36" height="40" rx="2" fill="#3D5169"/>
+  <!-- Horizontal fold line (bed fold) -->
+  <rect x="14" y="31" width="36" height="2" rx="1" fill="#9B6F3C"/>
+  <!-- Handle -->
+  <rect x="28" y="42" width="8" height="3" rx="1.5" fill="#9B6F3C"/>
+</svg>

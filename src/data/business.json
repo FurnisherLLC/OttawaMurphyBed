@@ -1,0 +1,29 @@
+{
+  "name": "Ottawa Murphy Bed",
+  "phone": "613-224-2150",
+  "phoneTel": "+16132242150",
+  "email": "sales@thenewoaktree.com",
+  "url": "https://ottawamurphybed.com",
+  "address": {
+    "streetAddress": "107 Colonnade Road North, Unit 7",
+    "addressLocality": "Ottawa",
+    "addressRegion": "ON",
+    "postalCode": "K2E 7M3",
+    "addressCountry": "CA"
+  },
+  "hostedAt": "Kessels Upholstery",
+  "hostedAtUrl": "https://www.houseofkessels.com/pages/contact",
+  "showroom": "The New Oak Tree",
+  "showroomUrl": "https://thenewoaktree.com",
+  "openingHours": [
+    { "days": "Monday to Friday", "opens": "9:00 AM", "closes": "5:00 PM" },
+    { "days": "Saturday", "opens": "9:00 AM", "closes": "4:00 PM" },
+    { "days": "Sunday", "opens": "11:00 AM", "closes": "3:00 PM" }
+  ],
+  "schemaOpeningHours": [
+    "Mo-Fr 09:00-17:00",
+    "Sa 09:00-16:00",
+    "Su 11:00-15:00"
+  ],
+  "googleMapsUrl": "https://maps.google.com/?q=107+Colonnade+Road+North+Unit+7+Ottawa+ON+K2E+7M3"
+}

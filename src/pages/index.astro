@@ -1,0 +1,690 @@
+---
+import Base from '../layouts/Base.astro';
+import business from '../data/business.json';
+
+const faq = [
+  {
+    question: "What is a murphy bed?",
+    answer: "A murphy bed, also called a wall bed or fold-down bed, is a bed that folds vertically into a wall cabinet when not in use. When closed, it looks like a cabinet or built-in unit. When open, it's a fully functional bed with a standard mattress. Murphy beds are popular in condos, small apartments, and rooms that serve double duty as a home office or guest room."
+  },
+  {
+    question: "How much does a murphy bed cost in Ottawa?",
+    answer: "Murphy beds in Ottawa typically range from $2,500 to $5,500 CAD depending on size, configuration, and finish. Queen-size vertical wall beds are the most common choice. Custom storage panels, shelving, and integrated desks add to the cost. Contact us at 613-224-2150 for a specific quote."
+  },
+  {
+    question: "What sizes of murphy beds do you offer?",
+    answer: "We carry twin, double (full), and queen murphy beds in vertical and horizontal orientations. Queen vertical is the most popular for Ottawa condos and small bedrooms. Visit the showroom at Kessels Upholstery and we can walk you through the options."
+  },
+  {
+    question: "Where can I see a murphy bed in person in Ottawa?",
+    answer: "Visit The New Oak Tree showroom, inside Kessels Upholstery at 107 Colonnade Road North, Unit 7, Ottawa, ON K2E 7M3. Our team can walk you through configurations, sizes, and options in person. Open Monday to Friday 9 AM to 5 PM, Saturday 9 AM to 4 PM, Sunday 11 AM to 3 PM. No appointment needed."
+  },
+  {
+    question: "Do murphy beds work with any mattress?",
+    answer: "Murphy beds are designed to work with standard foam or hybrid mattresses, typically 8 to 12 inches thick. Spring mattresses are generally not recommended as they can be too heavy. We can advise on the right mattress when you visit the showroom."
+  },
+  {
+    question: "How long does murphy bed installation take?",
+    answer: "Professional installation of a murphy bed typically takes half a day to a full day depending on the configuration and wall type. Our team handles delivery and installation in Ottawa and the surrounding area. Call 613-224-2150 to discuss your project."
+  },
+  {
+    question: "Is a murphy bed comfortable to sleep on?",
+    answer: "Yes. A murphy bed uses a standard mattress, not a foldout sofa mattress. Comfort is comparable to a conventional bed. The hardware keeps the mattress horizontal and the springs make opening and closing effortless. Guests regularly report not noticing the difference."
+  },
+  {
+    question: "Can a murphy bed include a desk or shelving?",
+    answer: "Yes. Murphy beds can be configured with folding desks that remain usable when the bed is open, plus built-in shelving, cabinets, and panel storage on either side. These are popular for dedicated home office and guest room combinations. Ask us about current configurations at the showroom."
+  }
+];
+---
+
+<Base
+  title="Ottawa Murphy Bed | Wall Beds &amp; Murphy Beds in Ottawa, Ontario"
+  description="Ottawa's destination for murphy beds and wall beds. Visit The New Oak Tree showroom inside Kessels Upholstery, 107 Colonnade Road North. Custom configurations, expert advice. Call 613-224-2150."
+  faq={faq}
+>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero">
+    <div class="hero__inner container">
+      <p class="hero__eyebrow">Ottawa, Ontario</p>
+      <h1>Murphy Beds &amp; Wall Beds<br /><em>for Ottawa Homes</em></h1>
+      <p class="hero__sub">
+        Custom murphy beds for Ottawa condos, guest rooms, home offices, and small spaces.
+        Visit the showroom at Kessels Upholstery and talk to us about your project.
+      </p>
+      <div class="hero__actions">
+        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">
+          Call {business.phone}
+        </a>
+        <a href="#showroom" class="btn btn-outline-cream">
+          Visit the Showroom
+        </a>
+      </div>
+      <p class="hero__note">
+        Inside {business.hostedAt} &mdash; {business.address.streetAddress}, Ottawa
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==================== THREE PILLARS ==================== -->
+  <section class="section section--white">
+    <div class="container pillars">
+      <div class="pillar">
+        <div class="pillar__icon" aria-hidden="true">&#x25A1;</div>
+        <h3>Visit Us in Ottawa</h3>
+        <p>
+          The New Oak Tree showroom is inside Kessels Upholstery at 107 Colonnade Road North.
+          Bring your room dimensions and we will walk you through your options. No appointment needed.
+        </p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon" aria-hidden="true">&#x2316;</div>
+        <h3>Custom to Your Space</h3>
+        <p>
+          Twin, double, or queen. Vertical or horizontal. With or without integrated
+          shelving, a fold-down desk, or panel storage. Built to fit your room.
+        </p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon" aria-hidden="true">&#x2713;</div>
+        <h3>Local Ottawa Business</h3>
+        <p>
+          We are based at 107 Colonnade Road North and serve Ottawa and the surrounding
+          area. Call us, visit us, and deal with people who know the product.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== WHY A MURPHY BED ==================== -->
+  <section class="section section--cream" id="why">
+    <div class="container why">
+      <div class="why__text">
+        <p class="section-label">Why a Murphy Bed?</p>
+        <h2>One room. Two purposes.</h2>
+        <div class="oak-rule oak-rule--left"></div>
+        <p>
+          Ottawa housing is expensive and space is at a premium. Whether you are in a
+          condo downtown, a townhouse in Kanata, or a mid-century home in the Glebe, a
+          spare bedroom is a luxury most of us cannot afford.
+        </p>
+        <p>
+          A murphy bed solves this without compromise. During the day, the room works.
+          At night, it sleeps. Guests get a real bed, not a fold-out couch.
+        </p>
+      </div>
+      <div class="why__cases">
+        <div class="why__case">
+          <h3>The condo with no guest room</h3>
+          <p>
+            Your den or home office becomes a proper guest room in seconds. No dedicated
+            bedroom required. No compromising your daily workspace.
+          </p>
+        </div>
+        <div class="why__case">
+          <h3>The home office that needs to flex</h3>
+          <p>
+            Murphy beds with integrated fold-down desks let you work when the bed is
+            closed and host when it is open. Both functions at full quality.
+          </p>
+        </div>
+        <div class="why__case">
+          <h3>The kids' room that grows up</h3>
+          <p>
+            Convert a play room or study room into sleeping space for sleepovers or
+            teenagers. Reclaim the floor space when the bed is not needed.
+          </p>
+        </div>
+        <div class="why__case">
+          <h3>Downsizing without giving up hosting</h3>
+          <p>
+            Move to a smaller home and still have a proper bed ready for family and
+            guests. A standard mattress, not an air mattress or pull-out couch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="section section--slate">
+    <div class="container">
+      <div class="text-center">
+        <p class="section-label section-label--light">Simple Process</p>
+        <h2>How it works</h2>
+        <div class="oak-rule"></div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <h3>Visit the showroom</h3>
+          <p>
+            Come to The New Oak Tree inside Kessels Upholstery at 107 Colonnade Road North.
+            Talk to our team about your project. Bring your room dimensions.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <h3>Choose your configuration</h3>
+          <p>
+            Pick your size, orientation, finish, and options. We will talk through what
+            works best for your room and how you plan to use the space.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <h3>Delivery and installation</h3>
+          <p>
+            We handle delivery and professional installation in Ottawa. Measured to fit.
+            Secured to the wall. Ready to use the same day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== SHOWROOM ==================== -->
+  <section class="section section--white" id="showroom">
+    <div class="container showroom">
+      <div class="showroom__info">
+        <p class="section-label">The New Oak Tree Showroom</p>
+        <h2>See it in person</h2>
+        <div class="oak-rule oak-rule--left"></div>
+        <p>
+          The New Oak Tree showroom is inside Kessels Upholstery at 107 Colonnade Road North
+          in Ottawa. Walk in, bring your room dimensions, and we will talk you through
+          what works for your space. No appointment needed.
+        </p>
+        <p>
+          Pre-orders are welcome. If you know what you want, call us and we can get
+          the process started before you even visit.
+        </p>
+
+        <div class="showroom__contact">
+          <a href={`tel:${business.phoneTel}`} class="btn btn-primary">
+            Call {business.phone}
+          </a>
+          <a href={`mailto:${business.email}`} class="btn btn-outline">
+            Email Us
+          </a>
+        </div>
+
+        <div class="showroom__details">
+          <div class="showroom__address">
+            <p class="showroom__detail-label">Address</p>
+            <address>
+              {business.address.streetAddress}<br />
+              {business.address.addressLocality}, {business.address.addressRegion} {business.address.postalCode}<br />
+              <a href={business.hostedAtUrl} target="_blank" rel="noopener">
+                Inside {business.hostedAt}
+              </a>
+            </address>
+            <a href={business.googleMapsUrl} target="_blank" rel="noopener" class="directions-link">
+              Get directions &rarr;
+            </a>
+          </div>
+          <div class="showroom__hours">
+            <p class="showroom__detail-label">Hours</p>
+            {business.openingHours.map(h => (
+              <div class="hours-row">
+                <span>{h.days}</span>
+                <span>{h.closes ? `${h.opens} - ${h.closes}` : h.opens}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="showroom__map-placeholder">
+        <div class="map-box">
+          <p class="map-box__label">107 Colonnade Road North, Unit 7</p>
+          <p class="map-box__sub">Ottawa, ON K2E 7M3</p>
+          <a
+            href={business.googleMapsUrl}
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+            style="margin-top: 1.5rem;"
+          >
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="section section--cream" id="faq">
+    <div class="container faq">
+      <div class="text-center" style="margin-bottom: 3rem;">
+        <p class="section-label">Common Questions</p>
+        <h2>Murphy Bed FAQ</h2>
+        <div class="oak-rule"></div>
+      </div>
+      <div class="faq__grid">
+        {faq.map(item => (
+          <details class="faq__item">
+            <summary class="faq__question">{item.question}</summary>
+            <p class="faq__answer">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="section section--slate cta-final">
+    <div class="container text-center">
+      <h2>Ready to reclaim your space?</h2>
+      <div class="oak-rule"></div>
+      <p class="cta-final__sub">
+        Call us or stop by the showroom. We are at 107 Colonnade Road North in Ottawa,
+        Monday to Friday 9 AM to 5 PM, Saturday 9 AM to 4 PM.
+      </p>
+      <div class="cta-final__actions">
+        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">
+          Call {business.phone}
+        </a>
+        <a href={business.googleMapsUrl} target="_blank" rel="noopener" class="btn btn-outline-cream">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+
+<style>
+  /* ---- Hero ---- */
+  .hero {
+    background-color: var(--color-slate);
+    color: var(--color-cream);
+    padding: 6rem 0 5rem;
+    text-align: center;
+  }
+
+  .hero__inner {
+    max-width: 780px;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-oak-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    color: var(--color-cream);
+    margin-bottom: 1.5rem;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--color-oak-light);
+  }
+
+  .hero__sub {
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: rgba(245, 242, 237, 0.85);
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__actions .btn,
+  .cta-final__actions .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hero__note {
+    font-size: 0.85rem;
+    color: rgba(245, 242, 237, 0.5);
+  }
+
+  /* ---- Three Pillars ---- */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .pillar {
+    text-align: center;
+  }
+
+  .pillar__icon {
+    font-size: 2rem;
+    color: var(--color-oak);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .pillar h3 {
+    margin-bottom: 0.75rem;
+  }
+
+  .pillar p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  /* ---- Why Murphy Bed ---- */
+  .why {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .why__text p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .why__cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .why__case {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-oak);
+    padding: 1.5rem;
+    border-radius: 2px;
+  }
+
+  .why__case h3 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
+  }
+
+  .why__case p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* ---- Section label ---- */
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-oak);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-label--light {
+    color: var(--color-oak-light);
+  }
+
+  /* ---- How it Works ---- */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+  }
+
+  .step {
+    position: relative;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-oak);
+  }
+
+  .step__num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-oak);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .step h3 {
+    color: var(--color-cream);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step p {
+    font-size: 0.925rem;
+    color: rgba(245, 242, 237, 0.75);
+    line-height: 1.65;
+  }
+
+  /* ---- Showroom ---- */
+  .showroom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .showroom__info p {
+    margin-bottom: 1.25rem;
+    font-size: 1.02rem;
+  }
+
+  .showroom__contact {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+
+  .showroom__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 2rem;
+  }
+
+  .showroom__detail-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.6rem !important;
+  }
+
+  .showroom__address address {
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .directions-link {
+    font-size: 0.875rem;
+    color: var(--color-oak);
+    font-weight: 600;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--color-border);
+    gap: 1rem;
+  }
+
+  .hours-row:last-child { border-bottom: none; }
+
+  /* Map placeholder box */
+  .showroom__map-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .map-box {
+    background-color: var(--color-cream);
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .map-box__label {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-slate);
+    margin-bottom: 0.5rem;
+  }
+
+  .map-box__sub {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  /* ---- FAQ ---- */
+  .faq__grid {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .faq__item {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .faq__item[open] {
+    border-color: var(--color-oak);
+  }
+
+  .faq__question {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-slate);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    user-select: none;
+  }
+
+  .faq__question::-webkit-details-marker { display: none; }
+
+  .faq__question::after {
+    content: '+';
+    font-size: 1.4rem;
+    font-weight: 300;
+    flex-shrink: 0;
+    color: var(--color-oak);
+    transition: transform 0.2s;
+  }
+
+  .faq__item[open] .faq__question::after {
+    content: '\2212';
+  }
+
+  .faq__answer {
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  /* ---- Final CTA ---- */
+  .cta-final h2 {
+    color: var(--color-cream);
+    margin-bottom: 0;
+  }
+
+  .cta-final__sub {
+    max-width: 540px;
+    margin: 1.5rem auto 0;
+    font-size: 1.05rem;
+    color: rgba(245, 242, 237, 0.75);
+  }
+
+  .cta-final__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 900px) {
+    .why {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .showroom {
+      grid-template-columns: 1fr;
+    }
+
+    .showroom__map-placeholder {
+      order: -1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pillars {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .steps {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      padding: 4rem 0 3.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .why__cases {
+      grid-template-columns: 1fr;
+    }
+
+    .showroom__details {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
