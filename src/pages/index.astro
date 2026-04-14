@@ -9,7 +9,7 @@ const faq = [
   },
   {
     question: "How much does a murphy bed cost in Ottawa?",
-    answer: "Our solid hardwood murphy beds are priced depending on size, wood species, stain, and configuration. Unlike mass-market options built from particle board or veneer, these are built to last — from real wood, by hand, in Ontario. Contact us at 343-338-0380 for a specific quote."
+    answer: "Our solid hardwood murphy beds start at $3,800 CAD for a twin, $4,500 for a queen, and $4,800 for a king, installed. Unlike mass-market options built from particle board or veneer, these are built to last from real wood, by hand, in Ontario. Contact us at 343-338-0380 for a specific quote."
   },
   {
     question: "What makes your murphy beds different from what I see online?",
@@ -17,11 +17,15 @@ const faq = [
   },
   {
     question: "What can I customize?",
-    answer: "Everything. Wood species (including maple, walnut, oak, and others), stain or finish, bed size (twin, double, queen), orientation (vertical or horizontal), side shelving units, integrated fold-down desk, cabinet panel design, and hardware. Every bed is built to your specification."
+    answer: "Everything. Wood species (including maple, walnut, wormy maple, oak, and others), stain or finish, bed size (twin, double, queen), orientation (vertical or horizontal), side shelving units, integrated fold-down desk, cabinet panel design, and hardware. Every bed is built to your specification."
   },
   {
     question: "Where can I see one in person and discuss my options?",
     answer: "Visit The New Oak Tree showroom, inside Kessels Upholstery at 107 Colonnade Road North, Unit 7, Ottawa, ON K2E 7M3. Our team can walk you through options, discuss your room, and help you configure exactly what you need. Open Monday to Friday 9 AM to 5 PM, Saturday 9 AM to 4 PM, Sunday 11 AM to 3 PM. No appointment needed."
+  },
+  {
+    question: "Do you do in-home estimates?",
+    answer: "Yes. We can send someone to your home to take measurements and discuss configuration options in your actual space. Call 343-338-0380 to arrange a visit."
   },
   {
     question: "How long does installation take?",
@@ -36,42 +40,45 @@ const faq = [
 
 <Base
   title="Ottawa Murphy Bed | Solid Hardwood Wall Beds, Built in Canada"
-  description="Custom solid hardwood murphy beds for Ottawa. Handbuilt by Mennonite craftsmen in Southern Ontario. Every wood, stain, and configuration available. Visit our Ottawa showroom or call 343-338-0380."
+  description="Custom solid hardwood murphy beds for Ottawa. Handbuilt by Mennonite craftsmen in Southern Ontario. Every wood, stain, and configuration available. Starting at $3,800 installed. Call 343-338-0380."
   faq={faq}
 >
 
   <!-- ==================== HERO ==================== -->
   <section class="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__inner container">
+    <div class="hero__stage">
+      <img
+        class="hero__img"
+        src="/images/hero-cinematic-edit.webp"
+        alt="Solid hardwood murphy bed open in a warm evening room"
+        draggable="false"
+      />
+    </div>
+    <div class="hero__content container">
       <p class="hero__eyebrow">Handbuilt in Canada &bull; Southern Ontario Mennonite Craft</p>
       <h1>Solid Hardwood<br />Murphy Beds</h1>
       <p class="hero__sub">
         Not particle board. Not veneer. Real wood, built by hand,
-        to your exact specification. Ottawa's source for heirloom-quality wall beds.
+        to your exact specification.
       </p>
       <div class="hero__actions">
-        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">
-          Call {business.phone}
-        </a>
-        <a href="#showroom" class="btn btn-outline-cream">
-          Visit the Showroom
-        </a>
+        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">Call {business.phone}</a>
+        <a href="#showroom" class="btn btn-outline-cream">Visit the Showroom</a>
       </div>
     </div>
   </section>
 
 
-  <!-- ==================== CRAFT STATEMENT ==================== -->
-  <section class="section section--slate">
+  <!-- ==================== CRAFT ==================== -->
+  <section class="section section--slate" id="craft">
     <div class="container craft">
       <div class="craft__text">
         <p class="section-label section-label--light">The Difference</p>
-        <h2>Built the way furniture<br />used to be built.</h2>
+        <h2>One room.<br />Two lives.</h2>
         <div class="oak-rule oak-rule--left"></div>
         <p>
           Every murphy bed we sell is crafted by Mennonite woodworkers in Southern Ontario
-          from solid hardwood. No particle board core, no veneer surface and no shortcuts.
+          from solid hardwood. No particle board core, no veneer surface, no shortcuts.
           The same construction principles that have defined fine furniture for generations.
         </p>
         <p>
@@ -92,71 +99,72 @@ const faq = [
             <span class="craft__mark-label">Built by</span>
             <span class="craft__mark-value">Mennonite craftsmen, Southern Ontario</span>
           </div>
+          <div class="craft__mark">
+            <span class="craft__mark-label">Starting at</span>
+            <span class="craft__mark-value">$3,800 CAD installed</span>
+          </div>
         </div>
       </div>
-      <div class="craft__image">
+      <div class="craft__comparison" id="craft-comparison" aria-label="Drag to compare murphy bed closed and open">
         <img
-          src="/images/bed-background.png"
-          alt="Solid hardwood murphy bed open in a room, showing built-in shelving and natural wood construction"
-          width="600"
-          height="600"
-          loading="eager"
+          class="craft-comp__open"
+          src="/images/open.webp"
+          alt="Murphy bed open"
+          draggable="false"
         />
+        <img
+          class="craft-comp__closed"
+          src="/images/closed.webp"
+          alt="Murphy bed closed, looking like a wardrobe"
+          draggable="false"
+        />
+        <div class="craft-comp__handle" aria-hidden="true">
+          <div class="craft-comp__line"></div>
+          <div class="craft-comp__knob">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="craft-comp__labels" aria-hidden="true">
+          <span>Open</span>
+          <span>Closed</span>
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!-- ==================== GALLERY ==================== -->
-  <section class="section section--cream" id="gallery">
+
+
+  <!-- ==================== PRODUCT GALLERY ==================== -->
+  <section class="section section--white">
     <div class="container">
-      <div class="text-center gallery__header">
+      <div class="text-center gallery-header">
         <p class="section-label">The Work</p>
-        <h2>Every finish is different.<br />Yours is built to order.</h2>
+        <h2>Yours is built to order.</h2>
         <div class="oak-rule"></div>
-        <p class="gallery__sub">
-          Wood species, stain, shelving, desk, size, orientation. All of it is yours to specify.
-          The beds below are examples of what comes out of the workshop.
-        </p>
       </div>
       <div class="gallery__grid">
         <div class="gallery__item gallery__item--wide">
-          <img
-            src="/images/bed-maple-sides.jpg"
-            alt="Murphy bed closed, maple finish with side shelving units"
-            width="1024"
-            height="1024"
-            loading="lazy"
-          />
+          <img src="/images/bed-maple-sides.webp" alt="Murphy bed closed, maple finish with side shelving" width="1024" height="1024" loading="lazy" />
           <div class="gallery__caption">
             <span class="gallery__finish">Maple</span>
             <span class="gallery__config">With side shelving &bull; Closed</span>
           </div>
         </div>
         <div class="gallery__item">
-          <img
-            src="/images/bed-open.png"
-            alt="Murphy bed open, maple finish with side shelving, showing the transformation from cabinet to bed"
-            width="1024"
-            height="1024"
-            loading="lazy"
-          />
-          <div class="gallery__caption">
-            <span class="gallery__finish">Maple</span>
-            <span class="gallery__config">With side shelving &bull; Open</span>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img
-            src="/images/bed-walnut-nosides.png"
-            alt="Murphy bed closed, walnut finish without side shelving"
-            width="1024"
-            height="1024"
-            loading="lazy"
-          />
+          <img src="/images/bed-walnut-nosides.webp" alt="Murphy bed closed, walnut finish without side shelving" width="1024" height="1024" loading="lazy" />
           <div class="gallery__caption">
             <span class="gallery__finish">Walnut</span>
             <span class="gallery__config">No side shelving &bull; Closed</span>
+          </div>
+        </div>
+        <div class="gallery__item">
+          <img src="/images/any-wood-stain.webp" alt="Murphy bed showing wood stain customization options" width="1024" height="1024" loading="lazy" />
+          <div class="gallery__caption">
+            <span class="gallery__finish">Any wood</span>
+            <span class="gallery__config">Any stain &bull; Your specification</span>
           </div>
         </div>
       </div>
@@ -165,7 +173,7 @@ const faq = [
 
 
   <!-- ==================== CUSTOMIZE ==================== -->
-  <section class="section section--white">
+  <section class="section section--cream">
     <div class="container customize">
       <div class="customize__intro">
         <p class="section-label">Configuration</p>
@@ -182,7 +190,7 @@ const faq = [
       <div class="customize__options">
         <div class="option">
           <h3>Wood species</h3>
-          <p>Maple, walnut, oak, and other solid hardwoods. Each species has a distinct grain character and takes stain differently.</p>
+          <p>Maple, walnut, wormy maple, oak, and other solid hardwoods. Each species has a distinct grain character and takes stain differently.</p>
         </div>
         <div class="option">
           <h3>Stain and finish</h3>
@@ -190,7 +198,7 @@ const faq = [
         </div>
         <div class="option">
           <h3>Bed size</h3>
-          <p>Twin, double, or queen. Vertical or horizontal orientation depending on ceiling height and wall width.</p>
+          <p>Twin, double, queen, or king. Vertical or horizontal orientation depending on ceiling height and wall width.</p>
         </div>
         <div class="option">
           <h3>Side shelving</h3>
@@ -221,26 +229,17 @@ const faq = [
         <div class="step">
           <div class="step__num">1</div>
           <h3>Visit the showroom</h3>
-          <p>
-            Come to The New Oak Tree inside Kessels Upholstery at 107 Colonnade Road North.
-            Bring your room dimensions. Our team will walk you through your options.
-          </p>
+          <p>Come to The New Oak Tree inside Kessels Upholstery at 107 Colonnade Road North. Bring your room dimensions. Our team will walk you through your options.</p>
         </div>
         <div class="step">
           <div class="step__num">2</div>
           <h3>Specify your bed</h3>
-          <p>
-            Choose your wood, stain, size, orientation, and configuration. We order it
-            built to your specification by our craftsmen in Southern Ontario.
-          </p>
+          <p>Choose your wood, stain, size, orientation, and configuration. We order it built to your specification by our craftsmen in Southern Ontario.</p>
         </div>
         <div class="step">
           <div class="step__num">3</div>
           <h3>Delivery and installation</h3>
-          <p>
-            We deliver and install in Ottawa. Measured to fit, secured to the wall,
-            and ready to use. Professional installation included.
-          </p>
+          <p>We deliver and install in Ottawa. Measured to fit, secured to the wall, ready to use. In-home estimates available — call us to arrange.</p>
         </div>
       </div>
     </div>
@@ -248,7 +247,7 @@ const faq = [
 
 
   <!-- ==================== SHOWROOM ==================== -->
-  <section class="section section--cream" id="showroom">
+  <section class="section section--white" id="showroom">
     <div class="container showroom">
       <div class="showroom__info">
         <p class="section-label">Ottawa Showroom</p>
@@ -264,12 +263,8 @@ const faq = [
           before visiting, call us.
         </p>
         <div class="showroom__contact">
-          <a href={`tel:${business.phoneTel}`} class="btn btn-primary">
-            Call {business.phone}
-          </a>
-          <a href={`mailto:${business.email}`} class="btn btn-outline">
-            Email Us
-          </a>
+          <a href={`tel:${business.phoneTel}`} class="btn btn-primary">Call {business.phone}</a>
+          <a href={`mailto:${business.email}`} class="btn btn-outline">Email Us</a>
         </div>
         <div class="showroom__details">
           <div>
@@ -292,13 +287,13 @@ const faq = [
           </div>
         </div>
       </div>
-      <div class="showroom__visual">
+      <div class="showroom__map">
         <iframe
           title="Ottawa Murphy Bed showroom location"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d720.3!2d-75.7027442!3d45.3466618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce07927a064c3d%3A0xce29a6373f6ee666!2sOttawa+Murphy+Bed!5e0!3m2!1sen!2sca!4v1744000000000"
           width="100%"
           height="100%"
-          style="border:0; min-height: 420px; border-radius: 2px;"
+          style="border:0; border-radius: 2px;"
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
@@ -309,7 +304,7 @@ const faq = [
 
 
   <!-- ==================== FAQ ==================== -->
-  <section class="section section--white" id="faq">
+  <section class="section section--cream" id="faq">
     <div class="container faq">
       <div class="text-center" style="margin-bottom: 3rem;">
         <p class="section-label">Questions</p>
@@ -338,12 +333,8 @@ const faq = [
         Monday to Friday 9 AM to 5 PM &bull; Saturday 9 AM to 4 PM &bull; Sunday 11 AM to 3 PM
       </p>
       <div class="cta-final__actions">
-        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">
-          Call {business.phone}
-        </a>
-        <a href={business.googleMapsUrl} target="_blank" rel="noopener" class="btn btn-outline-cream">
-          Get Directions
-        </a>
+        <a href={`tel:${business.phoneTel}`} class="btn btn-phone">Call {business.phone}</a>
+        <a href={business.googleMapsUrl} target="_blank" rel="noopener" class="btn btn-outline-cream">Get Directions</a>
       </div>
     </div>
   </section>
@@ -351,58 +342,132 @@ const faq = [
 </Base>
 
 
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+  // --- Craft open/closed comparison slider ---
+  const craftComp = document.getElementById('craft-comparison');
+
+  if (craftComp) {
+    const closedImg = craftComp.querySelector('.craft-comp__closed') as HTMLElement;
+    const handle = craftComp.querySelector('.craft-comp__handle') as HTMLElement;
+    let dragging = false;
+    let pos = 50;
+
+    function setPos(clientX: number) {
+      const rect = craftComp!.getBoundingClientRect();
+      pos = Math.max(1, Math.min(99, ((clientX - rect.left) / rect.width) * 100));
+      closedImg.style.clipPath = `inset(0 ${(100 - pos).toFixed(2)}% 0 0)`;
+      handle.style.left = `${pos.toFixed(2)}%`;
+    }
+
+    // Init at 50%
+    setPos(craftComp.getBoundingClientRect().left + craftComp.getBoundingClientRect().width / 2);
+
+    handle.addEventListener('mousedown', (e) => { dragging = true; e.preventDefault(); });
+    handle.addEventListener('touchstart', () => { dragging = true; }, { passive: true });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    window.addEventListener('touchend', () => { dragging = false; });
+    window.addEventListener('mousemove', (e: MouseEvent) => { if (dragging) setPos(e.clientX); });
+    window.addEventListener('touchmove', (e: TouchEvent) => {
+      if (dragging) setPos(e.touches[0].clientX);
+    }, { passive: true });
+
+    craftComp.addEventListener('click', (e: MouseEvent) => {
+      if (!dragging) setPos(e.clientX);
+    });
+
+    // Bump the handle when the slider enters the viewport (once),
+    // and again on first mouseover, to signal interactivity.
+    const knob = handle.querySelector('.craft-comp__knob') as HTMLElement;
+    let bumped = false;
+
+    function bump() {
+      if (bumped) return;
+      bumped = true;
+      knob.classList.add('craft-comp__knob--bump');
+      knob.addEventListener('animationend', () => {
+        knob.classList.remove('craft-comp__knob--bump');
+      }, { once: true });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        // Short delay so user has a moment to see the slider before it nudges
+        setTimeout(bump, 600);
+        observer.disconnect();
+      }
+    }, { threshold: 0.6 });
+    observer.observe(craftComp);
+
+    craftComp.addEventListener('mouseenter', bump, { once: true });
+  }
+</script>
+
+
 <style>
-  /* ---- Hero ---- */
+  /* ==================== HERO ==================== */
   .hero {
     position: relative;
-    min-height: 90vh;
+    height: 100svh;
+    min-height: 560px;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    background-image: url('/images/hero.png');
-    background-size: cover;
-    background-position: center 35%;
-    color: var(--color-cream);
   }
 
-  .hero__overlay {
+  .hero__stage {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      105deg,
-      rgba(26, 37, 53, 0.92) 0%,
-      rgba(26, 37, 53, 0.75) 55%,
-      rgba(26, 37, 53, 0.3) 100%
-    );
   }
 
-  .hero__inner {
+  .hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+  }
+
+  .hero__content {
     position: relative;
-    z-index: 1;
-    max-width: 680px;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    z-index: 3;
+    max-width: 640px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Dark gradient behind text so it's readable on both image variants */
+  .hero__content::before {
+    content: '';
+    position: absolute;
+    inset: -3rem -4rem;
+    background: radial-gradient(ellipse at 30% 50%, rgba(26,37,53,0.75) 30%, transparent 80%);
+    z-index: -1;
+    pointer-events: none;
   }
 
   .hero__eyebrow {
+    display: block;
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.22em;
     color: var(--color-oak-light);
     margin-bottom: 1.5rem;
-    display: block;
   }
 
   .hero h1 {
     color: var(--color-cream);
     font-size: clamp(2.8rem, 7vw, 5rem);
     line-height: 1.05;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero__sub {
-    max-width: 520px;
-    font-size: 1.1rem;
+    max-width: 480px;
+    font-size: 1.05rem;
     line-height: 1.75;
     color: rgba(245, 242, 237, 0.88);
     margin-bottom: 2.5rem;
@@ -420,7 +485,104 @@ const faq = [
     padding: 1rem 2.5rem;
   }
 
-  /* ---- Craft ---- */
+  /* ==================== CRAFT COMPARISON ==================== */
+  .craft__comparison {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 2px;
+    cursor: col-resize;
+    user-select: none;
+  }
+
+  .craft-comp__open,
+  .craft-comp__closed {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .craft-comp__closed {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .craft-comp__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: col-resize;
+    pointer-events: none;
+  }
+
+  .craft-comp__line {
+    width: 2px;
+    flex: 1;
+    background: rgba(255,255,255,0.7);
+  }
+
+  .craft-comp__knob {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-slate);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    pointer-events: all;
+  }
+
+  @keyframes craft-bump {
+    0%   { transform: translateY(-50%) scale(1)    translateX(0); }
+    15%  { transform: translateY(-50%) scale(1.15) translateX(-8px); }
+    35%  { transform: translateY(-50%) scale(1.15) translateX(8px); }
+    55%  { transform: translateY(-50%) scale(1.08) translateX(-5px); }
+    70%  { transform: translateY(-50%) scale(1.04) translateX(4px); }
+    85%  { transform: translateY(-50%) scale(1.02) translateX(-2px); }
+    100% { transform: translateY(-50%) scale(1)    translateX(0); }
+  }
+
+  .craft-comp__knob--bump {
+    animation: craft-bump 0.75s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  .craft-comp__labels {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.85rem;
+    z-index: 11;
+    pointer-events: none;
+  }
+
+  .craft-comp__labels span {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.75);
+    background: rgba(0,0,0,0.28);
+    padding: 0.2rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  /* ==================== CRAFT ==================== */
   .craft {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -464,25 +626,8 @@ const faq = [
     text-align: right;
   }
 
-  .craft__image img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 2px;
-  }
-
-  /* ---- Gallery ---- */
-  .gallery__header {
-    margin-bottom: 3rem;
-  }
-
-  .gallery__sub {
-    max-width: 560px;
-    margin: 0 auto;
-    color: var(--color-text-muted);
-    font-size: 1rem;
-    line-height: 1.7;
-  }
+  /* ==================== GALLERY ==================== */
+  .gallery-header { margin-bottom: 3rem; }
 
   .gallery__grid {
     display: grid;
@@ -500,9 +645,7 @@ const faq = [
     background-color: var(--color-cream-dark);
   }
 
-  .gallery__item--wide img {
-    aspect-ratio: 4 / 3.5;
-  }
+  .gallery__item--wide img { aspect-ratio: 4 / 3.5; }
 
   .gallery__caption {
     display: flex;
@@ -526,7 +669,7 @@ const faq = [
     letter-spacing: 0.03em;
   }
 
-  /* ---- Customize ---- */
+  /* ==================== CUSTOMIZE ==================== */
   .customize {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -554,19 +697,11 @@ const faq = [
     border-right: 1px solid var(--color-border);
   }
 
-  .option h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-slate);
-  }
+  .option h3 { font-size: 1rem; margin-bottom: 0.5rem; }
 
-  .option p {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    line-height: 1.65;
-  }
+  .option p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.65; }
 
-  /* ---- Steps ---- */
+  /* ==================== HOW IT WORKS ==================== */
   .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -574,10 +709,7 @@ const faq = [
     margin-top: 3rem;
   }
 
-  .step {
-    border-top: 2px solid var(--color-oak);
-    padding-top: 1rem;
-  }
+  .step { border-top: 2px solid var(--color-oak); padding-top: 1rem; }
 
   .step__num {
     font-family: var(--font-display);
@@ -589,19 +721,10 @@ const faq = [
     margin-bottom: 0.5rem;
   }
 
-  .step h3 {
-    color: var(--color-cream);
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-  }
+  .step h3 { color: var(--color-cream); font-size: 1.1rem; margin-bottom: 0.75rem; }
+  .step p { font-size: 0.925rem; color: rgba(245,242,237,0.72); line-height: 1.65; }
 
-  .step p {
-    font-size: 0.925rem;
-    color: rgba(245, 242, 237, 0.72);
-    line-height: 1.65;
-  }
-
-  /* ---- Showroom ---- */
+  /* ==================== SHOWROOM ==================== */
   .showroom {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -609,18 +732,9 @@ const faq = [
     align-items: center;
   }
 
-  .showroom__info p {
-    font-size: 1.02rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.75;
-  }
+  .showroom__info p { font-size: 1.02rem; margin-bottom: 1.25rem; line-height: 1.75; }
 
-  .showroom__contact {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2.5rem;
-  }
+  .showroom__contact { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 
   .showroom__details {
     display: grid;
@@ -631,28 +745,18 @@ const faq = [
   }
 
   .detail-label {
+    display: block;
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--color-text-muted);
     margin-bottom: 0.6rem;
-    display: block;
   }
 
-  address {
-    font-style: normal;
-    font-size: 0.9rem;
-    line-height: 1.75;
-    margin-bottom: 0.75rem;
-    color: var(--color-text);
-  }
+  address { font-style: normal; font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.75rem; }
 
-  .map-link {
-    font-size: 0.875rem;
-    color: var(--color-oak);
-    font-weight: 600;
-  }
+  .map-link { font-size: 0.875rem; color: var(--color-oak); font-weight: 600; }
 
   .hours-row {
     display: flex;
@@ -665,35 +769,31 @@ const faq = [
 
   .hours-row:last-child { border-bottom: none; }
 
-  .showroom__visual {
+  .showroom__map {
     min-height: 420px;
-    display: flex;
-    flex-direction: column;
   }
 
-  .showroom__visual iframe {
-    flex: 1;
+  .showroom__map iframe {
+    display: block;
     width: 100%;
     min-height: 420px;
     border-radius: 2px;
   }
 
-  /* ---- Section labels ---- */
+  /* ==================== SECTION LABELS ==================== */
   .section-label {
+    display: block;
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: var(--color-oak);
     margin-bottom: 0.75rem;
-    display: block;
   }
 
-  .section-label--light {
-    color: var(--color-oak-light);
-  }
+  .section-label--light { color: var(--color-oak-light); }
 
-  /* ---- FAQ ---- */
+  /* ==================== FAQ ==================== */
   .faq__grid {
     max-width: 780px;
     margin: 0 auto;
@@ -703,7 +803,7 @@ const faq = [
   }
 
   .faq__item {
-    background-color: var(--color-cream);
+    background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 3px;
     overflow: hidden;
@@ -745,14 +845,14 @@ const faq = [
     line-height: 1.7;
   }
 
-  /* ---- Final CTA ---- */
+  /* ==================== FINAL CTA ==================== */
   .cta-final h2 { color: var(--color-cream); }
 
   .cta-final__sub {
     max-width: 560px;
     margin: 1.5rem auto 0;
     font-size: 1rem;
-    color: rgba(245, 242, 237, 0.7);
+    color: rgba(245,242,237,0.7);
     line-height: 1.8;
   }
 
@@ -764,42 +864,22 @@ const faq = [
     margin-top: 2.5rem;
   }
 
-  /* ---- Responsive ---- */
+  /* ==================== RESPONSIVE ==================== */
   @media (max-width: 1000px) {
-    .customize {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
+    .customize { grid-template-columns: 1fr; gap: 2.5rem; }
   }
 
   @media (max-width: 900px) {
-    .craft,
-    .showroom {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .craft__image img,
-    .showroom__visual img {
-      height: 380px;
-    }
-
-    .gallery__grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery__item--wide {
-      grid-column: span 2;
-    }
+    .craft, .showroom { grid-template-columns: 1fr; gap: 2.5rem; }
+    .gallery__grid { grid-template-columns: 1fr 1fr; }
+    .gallery__item--wide { grid-column: span 2; }
+    .craft__comparison { max-width: 480px; margin: 0 auto; }
   }
 
   @media (max-width: 768px) {
-    .hero { min-height: 80vh; }
-
+    .hero { min-height: 80svh; }
     .steps { grid-template-columns: 1fr; }
-
     .customize__options { grid-template-columns: 1fr; }
-
     .showroom__details { grid-template-columns: 1fr; }
   }
 
@@ -807,4 +887,5 @@ const faq = [
     .gallery__grid { grid-template-columns: 1fr; }
     .gallery__item--wide { grid-column: span 1; }
   }
+
 </style>
